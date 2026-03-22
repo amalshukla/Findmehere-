@@ -136,3 +136,13 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'amalshukla562000@gmail.com'
 EMAIL_HOST_PASSWORD = 'amal@56'
+
+
+
+import os
+
+ALLOWED_HOSTS = ['*']
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
