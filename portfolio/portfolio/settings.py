@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d^vgrktnc@c3=tg$4d0wxo2few1fytghlh-l(9+*8ikd0+=swe'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+import os
 
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 # Application definition
 
@@ -139,6 +139,10 @@ import os
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://your-frontend.vercel.app"
+]
 
 CORS_ALLOWED_ORIGINS = [
     "https://findmehere-seven.vercel.app"

@@ -7,7 +7,6 @@ import Skills from "./components/Skills";
 import DarkModeToggle from "./components/DarkModeToggle";
 
 import { Toaster } from "react-hot-toast";
-import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
        <Toaster position="top-right" />
 
       <DarkModeToggle />
-      <Navbar />
       <Hero />
       <About />
     
