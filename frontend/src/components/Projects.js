@@ -36,6 +36,7 @@ export default function Projects() {
 
               <a
                 href={p.link}
+                rel="noreferrer"
                 target="_blank"
                 className="text-blue-500 mt-2 inline-block"
               >
