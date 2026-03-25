@@ -55,7 +55,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
-CORS_ALLOW_ALL_ORIGINS = True
 
 TEMPLATES = [
     {
@@ -141,6 +140,7 @@ import os
 ALLOWED_HOSTS = ['*']
 
 CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_CREDENTIALS = True  # IMPORTANT
 
 CSRF_TRUSTED_ORIGINS = [
     "https://findmehere-seven.vercel.app"
@@ -149,5 +149,9 @@ CSRF_TRUSTED_ORIGINS = [
 CORS_ALLOWED_ORIGINS = [
     "https://findmehere-seven.vercel.app"
 ]
+CORS_ALLOW_HEADERS = ["*"]
+CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
