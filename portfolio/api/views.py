@@ -34,7 +34,7 @@ class ContactCreateView(generics.CreateAPIView):
             subject=f"New Contact from {contact.name}",
             message=contact.message,
             from_email=contact.email,
-            recipient_list=['your_email@gmail.com'],
+            recipient_list=['amalshukla562000@gmail.com'],
         )
 
 
